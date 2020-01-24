@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Extension_Template</RootNamespace>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="PostDicomPlugin">
+      <HintPath>..\..\Library\Windows\PostDicomPlugin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

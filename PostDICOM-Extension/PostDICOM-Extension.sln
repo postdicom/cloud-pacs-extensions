@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{EB67DF8F-2397-49E7-9525-3C5045998485}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{10E9E045-D3AB-42F3-9B7D-056D19E92560}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{BD211CBB-86D3-4E17-8C1B-6ED8A35098BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extension-Template", "Template\Extension-Template\Extension-Template.csproj", "{08B44F71-14AE-42D6-AB0C-6C75CEB36300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extension-HelloWorld", "Examples\Extension-HelloWorld\Extension-HelloWorld.csproj", "{AB3697D7-5CD0-426E-B248-769B91AF5E94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linux", "Linux", "{A6A1871E-8809-4D11-95F3-D058C8408AB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MacOS", "MacOS", "{797FD6BD-32EC-4FE1-8872-8EBED78503F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows", "Windows", "{DF18B45A-F9E0-4C62-8FC3-C50D4F654037}"
+	ProjectSection(SolutionItems) = preProject
+		Library\Windows\PostDicomPlugin.dll = Library\Windows\PostDicomPlugin.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300}.Debug|x64.ActiveCfg = Debug|x64
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300}.Debug|x64.Build.0 = Debug|x64
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300}.Release|x64.ActiveCfg = Release|x64
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300}.Release|x64.Build.0 = Release|x64
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94}.Debug|x64.ActiveCfg = Debug|x64
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94}.Debug|x64.Build.0 = Debug|x64
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94}.Release|x64.ActiveCfg = Release|x64
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08B44F71-14AE-42D6-AB0C-6C75CEB36300} = {BD211CBB-86D3-4E17-8C1B-6ED8A35098BB}
+		{AB3697D7-5CD0-426E-B248-769B91AF5E94} = {10E9E045-D3AB-42F3-9B7D-056D19E92560}
+		{A6A1871E-8809-4D11-95F3-D058C8408AB1} = {EB67DF8F-2397-49E7-9525-3C5045998485}
+		{797FD6BD-32EC-4FE1-8872-8EBED78503F1} = {EB67DF8F-2397-49E7-9525-3C5045998485}
+		{DF18B45A-F9E0-4C62-8FC3-C50D4F654037} = {EB67DF8F-2397-49E7-9525-3C5045998485}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A5F852A-3C19-4712-8052-5D78B7FC533F}
+	EndGlobalSection
+EndGlobal
