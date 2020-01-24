@@ -5,3 +5,16 @@
 /PostDICOM-Extension/.vs/PostDICOM-Extension/v16/Server/sqlite3
 /PostDICOM-Extension/.vs/PostDICOM-Extension/DesignTimeBuild
 /PostDICOM-Extension/.vs/PostDICOM-Extension/v15/Server/sqlite3
+/PostDICOM-Extension/Examples/Extension-HelloWorld/obj/x64/Release/netcoreapp2.1
+/PostDICOM-Extension/Examples/Extension-HelloWorld/obj/project.assets.json
+/PostDICOM-Extension/Examples/Extension-HelloWorld/obj/Extension-HelloWorld.csproj.nuget.g.targets
+/PostDICOM-Extension/Examples/Extension-HelloWorld/obj/Extension-HelloWorld.csproj.nuget.g.props
+/PostDICOM-Extension/Examples/Extension-HelloWorld/obj/Extension-HelloWorld.csproj.nuget.dgspec.json
+/PostDICOM-Extension/Examples/Extension-HelloWorld/obj/Extension-HelloWorld.csproj.nuget.cache
+/PostDICOM-Extension/Template/Extension-Template/obj/x64/Release/netcoreapp2.1
+/PostDICOM-Extension/Template/Extension-Template/obj/project.assets.json
+/PostDICOM-Extension/Template/Extension-Template/obj/Extension-Template.csproj.nuget.g.targets
+/PostDICOM-Extension/Template/Extension-Template/obj/Extension-Template.csproj.nuget.g.props
+/PostDICOM-Extension/Template/Extension-Template/obj/Extension-Template.csproj.nuget.dgspec.json
+/PostDICOM-Extension/Template/Extension-Template/obj/Extension-Template.csproj.nuget.cache
+/PostDICOM-Extension/.vs/PostDICOM-Extension/v15
