@@ -1,11 +1,91 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <script>
+        var eventMethod = window.addEventListener
+            ? "addEventListener"
+            : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod === "attachEvent"
+            ? "onmessage"
+            : "message";
+
+        eventer(messageEvent, function (e) {
+            MessageReceived(e);
+        }.bind(this));
+
+        function SendMessageToServer() {
+            var content = document.getElementById("new_message_box").value;
+            parent.postMessage(content, '*');
+
+            var allMessages = document.getElementById("all_message");
+
+            var child = document.createElement("div");
+            child.className = "client_message"
+            child.innerHTML = "Client   : " + content;
+            allMessages.appendChild(child);
+        }
+
+        function MessageReceived(e) {
+            var allMessages = document.getElementById("all_message");
+
+            var child = document.createElement("div");
+            child.className = "server_message"
+            child.innerHTML = "Server : " + e.data;
+            allMessages.appendChild(child);
+        }
+
+        function Clear() {
+            document.getElementById("all_message").innerHTML = "";
+        }
+    </script>
+
+    <style>
+        .container {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: #a6f2ff;
+        }
+
+        .container_button {
+            cursor: pointer;
+            width: 70px;
+            height: 30px;
+        }
+
+        .row_container {
+            width: calc(100% - 20px);
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #6ca8db;
+        }
+
+            .row_container .client_message {
+                width: 100%;
+                color: darkred;
+            }
+
+            .row_container .server_message {
+                width: 100%;
+                color: darkgreen;
+            }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="row_container">
+            <input id="new_message_box" type="text" />
+        </div>
+        <div class="row_container">
+            <button class="container_button" onclick="Clear()">Clear</button>
+            <button class="container_button" onclick="SendMessageToServer()">Send</button>
+        </div>
+        <div id="all_message" class="row_container">
 
+        </div>
+    </div>
 </body>
 </html>
