@@ -38,52 +38,119 @@
             document.getElementById("all_message").innerHTML = "";
         }
     </script>
-
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <style>
-        .container {
-            width: 100%;
+        html {
+            box-sizing: border-box;
             height: 100%;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: #a6f2ff;
         }
 
-        .container_button {
-            cursor: pointer;
-            width: 70px;
-            height: 30px;
+        body {
+            line-height: 1;
+            font-family: 'Ubuntu',sans-serif;
+            margin: 0;
         }
 
-        .row_container {
-            width: calc(100% - 20px);
-            margin: 5px;
-            padding: 5px;
-            border: 1px solid #6ca8db;
+        .container {
+            margin: auto;
+            width: 100%;
+            height: auto;
+            max-width: 450px;
+            margin-top: 15px;
         }
 
-            .row_container .client_message {
-                width: 100%;
-                color: darkred;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+            table td {
+                vertical-align: middle;
+                font-size: 15px;
+                color: #018db0;
+                text-align: left;
+                padding: 8px;
+                font-weight: 700;
             }
 
-            .row_container .server_message {
-                width: 100%;
-                color: darkgreen;
-            }
+                table td button {
+                    color: #ffffff;
+                    font-size: 14px;
+                    text-align: left;
+                    float: left;
+                    font-weight: 700;
+                    cursor: pointer;
+                    padding: 9px 10px;
+                    background-color: #018db0;
+                    border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    border: none;
+                    outline: none;
+                }
+
+                    table td button:hover {
+                        background-color: #0781af;
+                    }
+
+        p {
+            font-size: 15px;
+            color: #018db0;
+            text-align: left;
+            padding: 0 8px;
+            font-weight: 700;
+        }
+
+        .input_text {
+            padding: 7px 10px;
+            border: 1px solid #cbd6e2;
+            font-size: 14px;
+            background-color: #f5f8fa;
+            color: #33475b;
+            display: block;
+            width: 100%;
+            outline-color: #33475b;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .result_container {
+            width: calc(100% - 16px);
+            height: auto;
+            padding: 0 8px;
+        }
+
+        .client_message {
+            margin-bottom: 3px;
+            color: #08a508;
+        }
+
+        .server_message {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="row_container">
-            <input id="new_message_box" type="text" />
-        </div>
-        <div class="row_container">
-            <button class="container_button" onclick="Clear()">Clear</button>
-            <button class="container_button" onclick="SendMessageToServer()">Send</button>
-        </div>
-        <div id="all_message" class="row_container">
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="2">Send message to server:</td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input_text" id="new_message_box" /></td>
+                    <td style="min-width:120px">
+                        <button onclick="SendMessageToServer()">Send</button>
+                        <button style="margin-left: 10px;" onclick="Clear()">Clear</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Result:</p>
+        <div id="all_message" class="result_container">
 
         </div>
     </div>
